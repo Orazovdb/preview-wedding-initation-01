@@ -1,0 +1,209 @@
+.date-location-section {
+	padding: 3rem 1.5rem 0rem;
+	background: #fff;
+	color: #1a1a1a;
+}
+
+.date-intro-block {
+	margin-bottom: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.date-intro-text {
+	margin: 0 0 1rem;
+	font-size: clamp(0.9rem, 2.5vw, 1rem);
+	color: #1a1a1a;
+	font-weight: 400;
+	line-height: 1.5;
+	width: 64%;
+	margin-left: auto;
+	text-align: right;
+}
+
+.date-calendar {
+	display: inline-block;
+	margin: 0 auto 1.5rem auto;
+	text-align: center;
+	width: 80%;
+}
+
+.date-calendar-title {
+	margin: 0 0 1rem;
+	font-size: clamp(1rem, 2.5vw, 1rem);
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	color: #1a1a1a;
+	text-transform: uppercase;
+}
+
+.date-calendar-weekdays {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2px 8px;
+	margin-bottom: 0.5rem;
+	font-size: clamp(0.7rem, 1.8vw, 0.7rem);
+	letter-spacing: 0.04em;
+	color: #5c4a3a;
+	opacity: 0.9;
+}
+
+.date-calendar-weekday {
+	text-align: center;
+	min-width: 1.8em;
+}
+
+.date-calendar-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2px 8px;
+	font-size: clamp(1rem, 2vw, 0.85rem);
+}
+
+.date-calendar-cell {
+	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.8em;
+	position: relative;
+	color: #1a1a1a;
+}
+
+.date-calendar-cell-wedding {
+	position: relative;
+}
+
+.date-calendar-day {
+	z-index: 1;
+}
+
+.date-calendar-heart {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-accent);
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.date-calendar-heart-icon {
+	animation: date-heart-pulse 1.4s ease-in-out infinite;
+	transform-origin: center;
+}
+
+.date-calendar-cell-wedding .date-calendar-day {
+	position: relative;
+	z-index: 2;
+	font-weight: 600;
+}
+
+@keyframes date-heart-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.94;
+		transform: scale(1.1);
+	}
+}
+
+.date-occasion {
+	margin: 0;
+	font-size: clamp(0.9rem, 2.5vw, 1rem);
+	color: #1a1a1a;
+	font-weight: 400;
+}
+
+.location-block {
+	position: relative;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 3rem 2rem 4rem;
+	background: #2d2d2d;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+	background-image: url("/location-bg-image.png");
+	filter: grayscale(100%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.location-title {
+	margin: 0 0 2rem;
+	font-size: clamp(1.75rem, 4vw, 2.25rem);
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.15em;
+	background-color: rgba(184, 135, 11, 0.556);
+	width: fit-content;
+	margin: 0 auto 1rem;
+}
+
+.location-venue {
+	text-align: center;
+	color: #fff;
+}
+
+.location-name {
+	margin: 0 0 0.35rem;
+	font-size: clamp(1rem, 2.5vw, 1.15rem);
+	font-weight: 600;
+	margin-bottom: 1rem;
+	background-color: rgba(184, 135, 11, 0.556);
+	width: fit-content;
+	margin: 0 auto 1rem;
+}
+
+.location-address {
+	margin: 0 0 1.25rem;
+	font-size: clamp(0.85rem, 2vw, 0.95rem);
+	color: rgba(255, 255, 255, 0.9);
+	line-height: 1.5;
+}
+
+.location-route-btn {
+	display: inline-block;
+	padding: 0.65rem 1.5rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background: #fff;
+	border: 1px solid #1a1a1a;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: opacity 0.2s;
+	border-radius: 20px;
+}
+
+.location-route-btn:hover {
+	opacity: 0.9;
+}
+
+.location-pearl {
+	position: absolute;
+	right: 8%;
+	bottom: 12%;
+	width: 14px;
+	height: 14px;
+	background: radial-gradient(
+		circle at 35% 35%,
+		#fff 0%,
+		rgba(255, 255, 255, 0.85) 25%,
+		rgba(220, 220, 220, 0.9) 50%,
+		rgba(180, 180, 180, 0.8) 100%
+	);
+	border-radius: 50%;
+	box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+		inset 2px 2px 4px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.2);
+}
