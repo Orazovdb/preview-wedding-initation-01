@@ -14,7 +14,7 @@ function getMonogram(groomName: string, brideName: string): string {
 	return `${g}|${b}`;
 }
 
-const OPEN_DURATION = 2;
+const OPEN_DURATION = 3.4;
 
 export function CouplePhoto({ onOpen, onUnlockAudio }: CouplePhotoProps) {
 	const [isOpening, setIsOpening] = useState(false);

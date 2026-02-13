@@ -1,10 +1,10 @@
 /** Путь к аудио в public/. Положите файл "I Think They Call This Love" как i-think-they-call-this-love.mp3 */
 export const weddingData = {
-	musicUrl: "/forever-young.mp3",
+	musicUrl: "/perfect.mp3",
 	/** Фото пары на первом экране (при клике открывается приглашение). Путь от корня сайта для совместимости с мессенджерами и PWA. */
 	couplePhotoUrl: "/rh.jpeg",
-	groomName: "Rovshen",
-	brideName: "Hanum",
+	groomName: "Myrat",
+	brideName: "Melike",
 	/** Телефоны для связи */
 	groomPhone: "+993 71914638",
 	bridePhone: "+993 61570925",
@@ -17,14 +17,14 @@ export const weddingData = {
 	/** Ссылка на Instagram */
 	instagramUrl: "https://www.instagram.com/invitationsred",
 	instagramLabel: "Instagram",
-	weddingDate: new Date("2026-04-04T18:00:00"),
-	venue: "Gülzaman",
-	venueAddress: "",
+	weddingDate: new Date("2026-05-23T18:00:00"),
+	venue: "Bagtyýarlyk",
+	venueAddress: "пр. Битарап Туркменистан, Ашхабад",
 	/** Фото ресторана (URL или путь в public/) */
-	venuePhotoUrl: "https://picsum.photos/800/450?random=venue",
+	venuePhotoUrl: "https://picsum.photos/800/450?random=venue3",
 	/** Ссылка на карту (Google Maps и т.д.) */
 	mapUrl:
-		"https://www.google.com/maps/place/%D0%93%D1%83%D0%BB%D1%8C+%D0%B7%D0%B0%D0%BC%D0%B0%D0%BD,+%D1%83%D0%BB.+%D0%9E%D0%B3%D1%83%D0%B7%D1%85%D0%B0%D0%BD%D0%B0,+A%C5%9Fgabat,+%D0%A2%D1%83%D1%80%D0%BA%D0%BC%D0%B5%D0%BD%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@37.9124155,58.3438763,144m/data=!3m1!1e3!4m6!3m5!1s0x3f70023ea9690633:0xb54a0a0303d503ae!8m2!3d37.9125344!4d58.3436165!16s%2Fg%2F11b6_9pfqn?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D",
+		"https://www.google.com/maps/place/Ashgabat,+Turkmenistan/@37.9600766,58.3260629,14z",
 	schedule: [
 		{
 			time: "18:00",
@@ -34,7 +34,7 @@ export const weddingData = {
 		{
 			time: "18:30",
 			title: "Начало банкета",
-			description: "Торжественный ужин в ресторане Gülzaman"
+			description: "Торжественный ужин в ресторане Bagtyýarlyk"
 		},
 		{
 			time: "21:00",
@@ -53,11 +53,11 @@ export const weddingData = {
 		}
 	],
 	photos: [
-		"https://picsum.photos/400/500?random=1",
-		"https://picsum.photos/400/500?random=2",
-		"https://picsum.photos/400/500?random=3",
-		"https://picsum.photos/400/500?random=4",
-		"https://picsum.photos/400/500?random=5",
-		"https://picsum.photos/400/500?random=6"
+		"https://picsum.photos/400/500?random=11",
+		"https://picsum.photos/400/500?random=22",
+		"https://picsum.photos/400/500?random=33",
+		"https://picsum.photos/400/500?random=44",
+		"https://picsum.photos/400/500?random=55",
+		"https://picsum.photos/400/500?random=66"
 	]
 } as const;

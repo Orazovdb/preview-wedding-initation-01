@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import "./App.css";
 import { CouplePhoto } from "./components/CouplePhoto";
 import { InvitationContent } from "./components/InvitationContent";
 import { weddingData } from "./data/wedding";
-import "./App.css";
-
 
 function App() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -29,11 +28,8 @@ function App() {
 		setIsOpen(true);
 	};
 
-
 	const unlockAudio = () => {
-		setTimeout(() => {
-			audioRef.current?.play().catch(() => {});
-		}, 1500);
+		audioRef.current?.play().catch(() => {});
 	};
 
 	return (

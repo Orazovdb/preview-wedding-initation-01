@@ -2,23 +2,23 @@
 	font-family: "Montserrat", system-ui, sans-serif !important;
 	line-height: 1.5;
 	font-weight: 400;
-	color: #3d2c1e;
-	background-color: #faf8f5;
+	color: #2e1e2e;
+	background-color: #faf5f7;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* Классическая палитра: слоновая кость + золото */
-	--color-bg: #faf8f5;
-	--color-bg-soft: #f5f0e8;
-	--color-bg-card: #fffef9;
-	--color-accent: #b8860b;
-	--color-accent-light: #d4af37;
-	--color-text: #3d2c1e;
-	--color-text-muted: #5c4a3a;
-	--color-border: rgba(184, 134, 11, 0.25);
-	--color-shadow: rgba(184, 134, 11, 0.12);
-	--color-heart: rgba(184, 134, 11, 0.45);
+	/* Палитра: бордовый + розовое золото */
+	--color-bg: #faf5f7;
+	--color-bg-soft: #f3eaee;
+	--color-bg-card: #fffbfc;
+	--color-accent: #8b3a4a;
+	--color-accent-light: #c47a8a;
+	--color-text: #2e1e2e;
+	--color-text-muted: #5a3d4d;
+	--color-border: rgba(139, 58, 74, 0.25);
+	--color-shadow: rgba(139, 58, 74, 0.12);
+	--color-heart: rgba(139, 58, 74, 0.45);
 }
 
 *,

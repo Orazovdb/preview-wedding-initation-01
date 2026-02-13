@@ -20,7 +20,7 @@
 	margin: 0 0 2rem;
 	font-size: clamp(1.75rem, 4vw, 2.25rem);
 	font-weight: 600;
-	color: #2d2d2d;
+	color: #2e1e2e;
 	text-align: center;
 	letter-spacing: 0.15em;
 	width: fit-content;
@@ -43,30 +43,30 @@
 
 .contact-label {
 	font-size: clamp(0.85rem, 2vw, 0.95rem);
-	color: #2d2d2d;
+	color: #2e1e2e;
 	font-weight: 500;
 }
 
 .contact-phone {
 	font-size: clamp(1rem, 2.5vw, 1.15rem);
 	font-weight: 600;
-	color: #2d2d2d;
+	color: #2e1e2e;
 	text-decoration: none;
 	transition: color 0.2s;
 }
 
 .contact-phone:hover {
-	color: #b8860b;
+	color: #8b3a4a;
 }
 
 .contact-link {
 	font-size: clamp(1rem, 2.5vw, 1.15rem);
 	font-weight: 600;
-	color: #2d2d2d;
+	color: #2e1e2e;
 	text-decoration: none;
 	transition: color 0.2s;
 }
 
 .contact-link:hover {
-	color: #b8860b;
+	color: #8b3a4a;
 }
