@@ -32,7 +32,7 @@ export const weddingData = {
 			description: "Встреча гостей, welcome-напитки и лёгкая атмосфера"
 		},
 		{
-			time: "18:30",
+			time: "19:00",
 			title: "Начало банкета",
 			description: "Торжественный ужин в ресторане Bagtyýarlyk"
 		},
