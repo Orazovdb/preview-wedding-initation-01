@@ -69,7 +69,7 @@ function App() {
 			<Analytics />
 			<SpeedInsights route="/" />
 			<ThemeToggle theme={theme} onToggle={toggleTheme} />
-			<Confetti fire={isOpen} />
+			<Confetti fire={isOpen} theme={theme} />
 			<audio
 				ref={audioRef}
 				src={weddingData.musicUrl}

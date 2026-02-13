@@ -4,9 +4,16 @@ import confetti from "canvas-confetti";
 interface ConfettiProps {
 	/** Запуск конфетти при переключении на true */
 	fire: boolean;
+	/** Текущая тема для выбора цвета конфетти */
+	theme?: "bw" | "rose";
 }
 
-export function Confetti({ fire }: ConfettiProps) {
+const THEME_COLORS = {
+	bw: ["#ffffff", "#1a1a1a", "#d4d4d4", "#333333"],
+	rose: ["#ffffff", "#8b3a4a", "#c47a8a", "#e5c1ca"],
+};
+
+export function Confetti({ fire, theme = "bw" }: ConfettiProps) {
 	const hasFired = useRef(false);
 
 	useEffect(() => {
@@ -16,7 +23,7 @@ export function Confetti({ fire }: ConfettiProps) {
 		const duration = 4000;
 		const end = Date.now() + duration;
 
-		const colors = ["#ffffff", "#1a1a1a", "#d4d4d4", "#333333"];
+		const colors = THEME_COLORS[theme];
 
 		const frame = () => {
 			confetti({
@@ -66,7 +73,7 @@ export function Confetti({ fire }: ConfettiProps) {
 		}, 300);
 
 		return () => clearTimeout(timer);
-	}, [fire]);
+	}, [fire, theme]);
 
 	return null;
 }
