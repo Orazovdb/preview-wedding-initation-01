@@ -6,8 +6,8 @@ export const weddingData = {
 	groomName: "Myrat",
 	brideName: "Melike",
 	/** Телефоны для связи */
-	groomPhone: "+993 71914638",
-	bridePhone: "+993 61570925",
+	groomPhone: "+993 71XXXXXX",
+	bridePhone: "+993 61XXXXXX",
 	/** Логотип в блоке контактов (путь в public/) */
 	logoUrl: "/logo-red.png",
 	/** Доп. контакт (организатор и т.д.) */
