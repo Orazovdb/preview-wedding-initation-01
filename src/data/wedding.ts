@@ -24,7 +24,7 @@ export const weddingData = {
 	venuePhotoUrl: "https://picsum.photos/800/450?random=venue3",
 	/** Ссылка на карту (Google Maps и т.д.) */
 	mapUrl:
-		"https://www.google.com/maps/place/Ashgabat,+Turkmenistan/@37.9600766,58.3260629,14z",
+		"https://www.google.com/maps/place/%D0%A2%D0%A0%D0%A6+%C2%AB%D0%91%D0%B0%D0%B3%D1%82%D1%8B%D1%8F%D1%80%D0%BB%D1%8B%D0%BA%C2%BB/@37.9170848,58.3657585,874m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3f70020b1b15c45f:0x41bd73daa974168!8m2!3d37.9170806!4d58.3683334!16s%2Fg%2F11cn17v7m2?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D",
 	schedule: [
 		{
 			time: "18:00",

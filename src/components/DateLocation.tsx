@@ -26,7 +26,6 @@ function buildCalendarGrid(date: Date): (number | null)[] {
 	const lastDay = new Date(year, month + 1, 0);
 	const daysInMonth = lastDay.getDate();
 
-	// Понедельник = 0 (ru-RU)
 	const startOffset = (firstDay.getDay() + 6) % 7;
 	const grid: (number | null)[] = [];
 
@@ -61,12 +60,47 @@ function HeartIcon({ className }: { className?: string }) {
 	);
 }
 
+function Ornament() {
+	return (
+		<svg
+			className="date-ornament"
+			viewBox="0 0 120 20"
+			width="120"
+			height="20"
+			aria-hidden
+		>
+			<line x1="0" y1="10" x2="45" y2="10" stroke="currentColor" strokeWidth="1" />
+			<circle cx="60" cy="10" r="4" fill="none" stroke="currentColor" strokeWidth="1" />
+			<circle cx="60" cy="10" r="1.5" fill="currentColor" />
+			<line x1="75" y1="10" x2="120" y2="10" stroke="currentColor" strokeWidth="1" />
+		</svg>
+	);
+}
+
+const calendarCell = {
+	hidden: { opacity: 0, scale: 0.8 },
+	visible: { opacity: 1, scale: 1 }
+};
+
+const calendarGrid = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: { staggerChildren: 0.015 }
+	}
+};
+
 export function DateLocation() {
 	const weddingDate = weddingData.weddingDate;
 	const month = weddingDate.getMonth();
 	const year = weddingDate.getFullYear();
 	const dayOfWedding = weddingDate.getDate();
 	const grid = buildCalendarGrid(weddingDate);
+
+	const timeStr = weddingDate.toLocaleTimeString("ru-RU", {
+		hour: "2-digit",
+		minute: "2-digit"
+	});
 
 	return (
 		<section className="date-location-section">
@@ -77,10 +111,12 @@ export function DateLocation() {
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
 			>
+				<Ornament />
 				<p className="date-intro-text">
 					Мы будем счастливы разделить с вами радость события
 				</p>
-				<div className="date-calendar">
+
+				<div className="date-calendar-card">
 					<h3 className="date-calendar-title">
 						{MONTHS[month]} {year}
 					</h3>
@@ -91,15 +127,22 @@ export function DateLocation() {
 							</span>
 						))}
 					</div>
-					<div className="date-calendar-grid">
+					<motion.div
+						className="date-calendar-grid"
+						variants={calendarGrid}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
+					>
 						{grid.map((cell, i) => {
 							const isWeddingDay = cell === dayOfWedding;
 							return (
-								<div
+								<motion.div
 									key={i}
 									className={`date-calendar-cell ${
 										isWeddingDay ? "date-calendar-cell-wedding" : ""
 									}`}
+									variants={calendarCell}
 								>
 									{cell !== null ? (
 										<>
@@ -111,12 +154,19 @@ export function DateLocation() {
 											)}
 										</>
 									) : null}
-								</div>
+								</motion.div>
 							);
 						})}
+					</motion.div>
+
+					<div className="date-calendar-time">
+						<span className="date-calendar-time-label">Начало в</span>
+						<span className="date-calendar-time-value">{timeStr}</span>
 					</div>
 				</div>
+
 				<p className="date-occasion">По случаю нашей свадьбы</p>
+				<Ornament />
 			</motion.div>
 
 			<motion.div
@@ -126,9 +176,10 @@ export function DateLocation() {
 				viewport={{ once: true }}
 				transition={{ duration: 0.5, delay: 0.1 }}
 			>
-				<h2 className="location-title">LOCATION</h2>
-				<div className="location-venue">
-					<p className="location-name">Ресторан «{weddingData.venue}»</p>
+				<div className="location-overlay" />
+				<div className="location-content">
+					<span className="location-label">LOCATION</span>
+					<h2 className="location-title">Ресторан «{weddingData.venue}»</h2>
 					{weddingData.venueAddress && (
 						<p className="location-address">{weddingData.venueAddress}</p>
 					)}
@@ -139,6 +190,9 @@ export function DateLocation() {
 							rel="noopener noreferrer"
 							className="location-route-btn"
 						>
+							<span className="location-route-btn-icon" aria-hidden>
+								&#9872;
+							</span>
 							Посмотреть на карте
 						</a>
 					)}
